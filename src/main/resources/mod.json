@@ -1,0 +1,7 @@
+{
+  "name": "betterIoPlugin",
+  "author": "AnoyingShulker credits to fuzz for the main plugin",
+  "main": "betterio.main",
+  "description": "Based on fuzz's plugin. Used on sebo's servers",
+  "version": 0.1
+}

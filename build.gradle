@@ -1,0 +1,25 @@
+apply plugin: "java"
+apply plugin: "maven"
+version '0.1'
+sourceCompatibility = 1.8
+repositories {
+    mavenCentral()
+    maven{ url 'https://jitpack.io' }
+}
+
+dependencies{
+    def version = "v104.6"
+    compileOnly "com.github.Anuken.Arc:arc-core:$version"
+    compileOnly "com.github.Anuken.Mindustry:core:$version"
+    compile "org.glassfish.jersey.core:jersey-client:2.25.1"
+    compile "redis.clients:jedis:3.2.0"
+    compile group: 'org.json', name: 'json', version: '20190722'
+    implementation 'org.javacord:javacord:3.0.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+jar {
+    version = null;
+    from{
+        configurations.runtimeClasspath.collect{it.isDirectory() ? it : zipTree(it)}
+    }
+}
