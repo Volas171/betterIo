@@ -6,8 +6,9 @@ import betterio.datas.PersistentPlayerData;
 import betterio.datas.PlayerData;
 import betterio.discordcommands.DiscordCommands;
 import mindustry.Vars;
-import mindustry.entities.type.Player;
+import mindustry.entities.Units;
 import mindustry.gen.Call;
+import mindustry.gen.Groups;
 import org.javacord.api.DiscordApi;
 import org.json.JSONObject;
 
@@ -34,9 +35,9 @@ public class BotThread extends Thread{
             try {
                 Thread.sleep(10000);
                 if (Mathf.chance(0.01f)) {
-                    api.updateActivity("( ͡° ͜ʖ ͡°) | " + main.prefix + "help | anoyingshulker.ddns.net");
+                    api.updateActivity("( ͡° ͜ʖ ͡°) | " + main.prefix + "help | mindustry.me");
                 } else {
-                    api.updateActivity("with " + playerGroup.all().size + (netServer.admins.getPlayerLimit() == 0 ? "" : "/" + netServer.admins.getPlayerLimit()) + " players | " + main.prefix + "help | anoyingshulker.ddns.net");
+                    api.updateActivity("with " + Groups.player.size() + (netServer.admins.getPlayerLimit() == 0 ? "" : "/" + netServer.admins.getPlayerLimit()) + " players | " + main.prefix + "help | mindustry.me");
                 }
             } catch(Exception e) {}
         }

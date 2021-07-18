@@ -1,7 +1,7 @@
 {
   "name": "betterIoPlugin",
-  "author": "AnoyingShulker credits to fuzz for the main plugin",
+  "author": "AnoyingShulker ft volasyouknow seven dot zero clone",
   "main": "betterio.main",
-  "description": "Based on fuzz's plugin. Used on sebo's servers",
-  "version": 0.1
+  "description": "Based on fuzz's plugin. Used on random servers",
+  "version": 0.2
 }

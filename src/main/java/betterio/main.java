@@ -12,12 +12,11 @@ import mindustry.content.Blocks;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.UnitTypes;
-import mindustry.entities.type.BaseUnit;
-import mindustry.entities.type.Player;
+import mindustry.entities.Units;
 import mindustry.game.EventType;
 import mindustry.gen.Call;
 import mindustry.graphics.Pal;
-import mindustry.plugin.Plugin;
+import mindustry.mod.Plugin;
 import mindustry.world.Build;
 import mindustry.world.Tile;
 import org.javacord.api.DiscordApi;
@@ -34,7 +33,7 @@ import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
 
-public class main extends Plugin {
+public class main {
     public static JedisPool pool;
     static Gson gson = new Gson();
     public static String prefix = ".";
@@ -117,7 +116,7 @@ public class main extends Plugin {
                     switch (rank) { // apply new tag
 
                         case 1:
-                            Call.sendMessage("[sky]Active player " + player.name + "[] joined the server!");
+                            Call.sendMessage("[sky]Active player " + player. + "[] joined the server!");
                             break;
                         case 2:
                             Call.sendMessage("[#fcba03]Veteran player " + player.name + "[] joined the server!");
